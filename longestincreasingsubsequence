@@ -1,0 +1,47 @@
+#this was from https://leetcode.com/problems/longest-increasing-subsequence/
+#Thought process: outline of what was gg thru my mind
+class Solution(object):
+ def lengthOfLIS(self, nums):
+#nums = input of unsorted array
+     sub = []
+     nums = []    
+#sub is the sorted subsequence 
+for n in range (1, len(nums)):
+#  for val in nums: is the same thing??
+   if nums[n] < nums[n+1]:
+      sub.append(num[n+1])
+#do i need to pos +=1 to move on to next index?? is this nums[] to indicate index possible???
+      break
+#Continues for all indexes in running order until nums[n] > nums[n+1] then stops
+   elif nums[n] >= nums[n+1]:
+      pos +=1   #is this how you jump to the next index?
+      break
+      return sub
+# n+1 is in middle of array, jump to next index     
+#num at [n] > [n+1]  (n+1 the last index), return and len(list)
+print(len(sub))
+print(sub)
+
+#Code that is readable and adapted from other people:
+
+class Solution(object):
+ def lengthOfLIS(self, nums):
+        sub = [ ]
+# sub is the sorted increasing subsequence
+        for val in nums:
+            pos , sub_len = 0, len(sub)
+            while(pos <= sub_len):    # update the element to the correct position of the sub.
+                if pos == sub_len:
+                    sub.append(val)
+                    break
+                elif val <= sub[pos]:
+                    sub[pos] = val
+                    break
+                else:
+                    pos += 1
+        return len(sub)
+        
+        
+    
+    
+

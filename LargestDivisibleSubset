@@ -1,0 +1,28 @@
+'''
+thought process
+1. sort the list?
+2. try divide the lowest number(i) with all the other int(j), store this value
+3. loop that
+4. if its 0, store and replace/branch out as j gets bigger if 1,2,3,6 then 123 or 136 works, branch out to that???? getting confused
+5.move on to next index
+use recursion??????
+
+'''
+class Solution(object):
+    def largestDivisibleSubset(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        if len(nums) == 0:
+            return []
+            print "give me an input with integers:<"
+        nums.sort
+        solution = # [[num] for num in nums]   this was my missing step idk how to write it, cred below 
+        for i in range(len(nums)):
+            for j in range(i):     
+                if nums[i] % nums[j] == 0 and len(solution[i]) < len(solution[j]) + 1:
+                    sol[i] = sol[j].append(nums[i])
+        return max(sol)
+        
+        #incomplete, its 1.30am LOL

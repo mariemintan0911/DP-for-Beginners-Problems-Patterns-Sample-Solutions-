@@ -1,0 +1,30 @@
+'''
+thought process
+1.define w and h???
+2. sort via width and height-done
+3. if BOTH cases are true
+then add into new Tuple
+len(Tuple)
+'''
+class Solution(object):
+    def maxEnvelopes(self, envelopes):
+        """
+        :type envelopes: List[List[int]]
+        :rtype: int
+        """
+        from operator import itemgetter
+        sorted(envelopes, key=itemgetter(0,1))
+        max_env = []
+      '''
+     #how to compare lists in lists????????? like 
+     for i in range(len(envelopes)):
+      # if list 1[0] < list 2[0] and list 1[1] < list 2[1]:   #cannot use <= cause if [2,2] and [3,2] for eg the [w,h] height wouldnt fit
+       if envelope[n][0] < envelope[n+1][0] and envelope[n][1] < envelope[n+1][1]:
+        max_env.append(envelope[n])
+        n =+1
+       else:
+        n=+1
+        return len(max_env)
+      '''  
+      print(len(max_env)
+    
